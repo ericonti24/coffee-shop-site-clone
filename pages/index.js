@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Image, Flex, Input, Button } from '@chakra-ui/react';
+import { Box, Heading, Text, Stack, Image, Flex, Input, Button, Textarea } from '@chakra-ui/react';
 import ScreenSizeDetector from '@/components/IsSmallerScreen';
 import { useState } from 'react';
 import buzzedgoatpic3 from '../public/images/buzzedgoatpic3.jpeg'
@@ -6,9 +6,22 @@ import buzzedgoatpic4 from '../public/images/buzzedgoatpic4.jpeg'
 import buzzedgoatpic7 from '../public/images/buzzedgoatpic7.jpeg'
 import buzzedgoatpic6 from '../public/images/buzzedgoatpic6.jpeg'
 import buzzedgoatpic8 from '../public/images/buzzedgoatpic8.webp'
+import buzzedgoatpic10 from '../public/images/buzzedgoatpic10.jpeg'
+import buzzedgoatpic11 from '../public/images/buzzedgoatpic11.webp'
 
 const HomePage = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [showForm1, setShowForm1] = useState(false);
+  const [showForm2, setShowForm2] = useState(false);
+
+  const toggleForm1 = () => {
+    setShowForm1(!showForm1);
+  };
+
+  const toggleForm2 = () => {
+    setShowForm2(!showForm2);
+  };
+  
   const handleInputFocus = () => {
     setIsClicked(true);
   };
@@ -18,7 +31,9 @@ const HomePage = () => {
   const buzzedgoatpic6 = "/_next/static/media/buzzedgoatpic6.4c5ca957.jpeg"
   const buzzedgoatpic7 = "/_next/static/media/buzzedgoatpic7.9819e21b.jpeg"
   const buzzedgoatpic8 = "/_next/static/media/buzzedgoatpic8.f4a577bb.webp"
-  // console.log(buzzedgoatpic8);
+  const buzzedgoatpic10 = "/_next/static/media/buzzedgoatpic10.68c83c7f.jpeg"
+  const buzzedgoatpic11 = "/_next/static/media/buzzedgoatpic11.6f1eca82.webp"
+  // console.log(buzzedgoatpic11);
   
   const isSmallerScreen = ScreenSizeDetector()
   return (
@@ -46,55 +61,56 @@ const HomePage = () => {
               dolor suscipit.
             </Text>
           </Box>
-          {/* <Box
-              backgroundImage={`url(${buzzedgoatpic6})`}
-              backgroundSize="cover"
-              backgroundPosition="center"
-              minHeight="400px"
-              px={4}
-              py={8}
-            >
-              <Flex
-                flexDirection="column"
-                alignItems="flex-start"
-                transform="translate(2%, 90%)"
-                color="white"
-              >
-                <Heading as="h2" mb={2}>Sign Up for Events</Heading>
-                <Text mb={2}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </Text>
-                <Flex alignItems="baseline">
-                  <Input
-                    placeholder='EMAIL'
-                    _placeholder={{ color: 'white'}}
-                    focusBorderColor='white'
-                    borderBottomColor={isClicked ? 'white' : 'white'}
-                    borderRadius='0'
-                    border='none'
-                    borderBottom='1px solid white'
-                    onClick={handleInputFocus}
-                    mr={2}
-                    width='200px'
-                  />
-                  <Button color='white'bg='black'>Submit</Button>
-                </Flex>
-              </Flex>
-            </Box> */}
           <Box mb={8}>
-            <Heading as="h2" mb={4}>Come Grab a Drink</Heading>
-            <Stack spacing={4}>
-              <Box>
-                <Heading as="h3" size="md" mb={2}>Location 1</Heading>
-                <Text>123 Main Street</Text>
-                <Text>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
+            <Heading as="h2" mb={4} textAlign='center'>Come Grab a Drink</Heading>
+            <Flex mb={8} alignItems="center" height='600px'>
+              <Box flex="1" textAlign="center">
+                <Image src={buzzedgoatpic11} alt="Image" height="100%" objectFit="contain" />
+                {showForm1 ? (
+                  <form>
+                    <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
+                    <Input placeholder="Name" mb={4} />
+                    <Input placeholder="Email" mb={4} />
+                    <Textarea placeholder="Message" mb={4} resize="none" />
+                    <Flex justify="flex-end">
+                      <Button color='white' bg='gray.600' borderRadius={0} mr={2}>Submit</Button>
+                      <Button colorScheme="gray" borderRadius={0} onClick={toggleForm1}>Cancel</Button>
+                    </Flex>
+                  </form>
+                ) : (
+                  <>
+                    <Heading as="h3" size="lg" mb={2}>Location 1</Heading>
+                    <Text fontSize="lg" mb={2}>123 Main Street</Text>
+                    <Text fontSize="lg" mb={4}>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
+                    <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm1} mb={2}>Connect With Us</Button>
+                  </>
+                )}
               </Box>
-              <Box>
-                <Heading as="h3" size="md" mb={2}>Location 2</Heading>
-                <Text>456 Elm Street</Text>
-                <Text>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
+            </Flex>
+            <Flex mb={8} alignItems="center" height='600px'>
+              <Box flex="1" textAlign="center">
+                <Image src={buzzedgoatpic10} alt="Image" height="100%" objectFit="contain" />
+                {showForm2 ? (
+                  <form>
+                    <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
+                    <Input placeholder="Name" mb={4} />
+                    <Input placeholder="Email" mb={4} />
+                    <Textarea placeholder="Message" mb={4} resize="none" />
+                    <Flex justify="flex-end">
+                      <Button color='white' bg='gray.600' borderRadius={0} mr={2}>Submit</Button>
+                      <Button colorScheme="gray" borderRadius={0} onClick={toggleForm2}>Cancel</Button>
+                    </Flex>
+                  </form>
+                ) : (
+                  <>
+                    <Heading as="h3" size="lg" mb={2}>Location 2</Heading>
+                    <Text fontSize="lg" mb={2}>456 Elm Street</Text>
+                    <Text fontSize="lg" mb={4}>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
+                    <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm2} mb={2}>Connect With Us</Button>
+                  </>
+                )}
               </Box>
-            </Stack>
+            </Flex>
           </Box>
         </Box>
       </Box>
@@ -127,61 +143,65 @@ const HomePage = () => {
             <Image src={buzzedgoatpic4} alt="Image" height="100%" objectFit="contain"/>
           </Box>
         </Flex>
-        {/* <Box
-          backgroundImage={`url(${buzzedgoatpic6})`}
-          backgroundSize="100% 100%"
-          backgroundPosition="center"
-          minHeight="900px" 
-          position="relative" 
-        >
-          <Flex
-            position="absolute"
-            top="50%"
-            left="70%" 
-            transform="translate(-30%, 10%)" 
-            flexDirection="column"
-            alignItems="flex-start" 
-            color="white"
-          >
-            <Heading as="h2" mb={2}>Sign Up for Events</Heading>
-            <Text mb={2}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            </Text>
-            <Flex alignItems="baseline">
-            <Input
-              placeholder='EMAIL'
-              _placeholder={{ color: 'white'}}
-              focusBorderColor='white'
-              borderBottomColor={isClicked ? 'white' : 'white'}
-              borderRadius='0'
-              border='none' 
-              borderBottom='1px solid white' 
-              onClick={handleInputFocus}
-              mr={2}
-              width='200px'
-            />
-            <Button color='white' bg='black'>Submit</Button>
-          </Flex>
-          </Flex>
-        </Box> */}
         <Box mb={8}>
           <Heading as="h2" mb={4}>Come Grab a Drink</Heading>
-          <Stack spacing={4}>
-            <Box>
-              <Heading as="h3" size="md" mb={2}>Location 1</Heading>
-              <Text>123 Main Street</Text>
-              <Text>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
+          <Flex alignItems="center" height='600px'>
+            <Box flex="1">
+              <Image src={buzzedgoatpic11} alt="Image" height="100%" objectFit="contain" />
             </Box>
-            <Box>
-              <Heading as="h3" size="md" mb={2}>Location 2</Heading>
-              <Text>456 Elm Street</Text>
-              <Text>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
+            <Box flex="1" ml={8}>
+              {showForm1 ? (
+                <form>
+                  <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
+                  <Input placeholder="Name" mb={4} />
+                  <Input placeholder="Email" mb={4} />
+                  <Textarea placeholder="Message" mb={4} resize="none" />
+                  <Flex justify="flex-end">
+                    <Button color='white' bg='gray.600' borderRadius={0} mr={2}>Submit</Button>
+                    <Button colorScheme="gray" borderRadius={0} onClick={toggleForm1}>Cancel</Button>
+                  </Flex>
+                </form>
+              ) : (
+                <>
+                  <Heading as="h3" size="lg" mb={2}>Location 1</Heading>
+                  <Text fontSize="lg" mb={2}>123 Main Street</Text>
+                  <Text fontSize="lg" mb={4}>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
+                  <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm1} mb={2}>Connect With Us</Button>
+                </>
+              )}
             </Box>
-          </Stack>
+          </Flex>
+          <Flex mb={8} alignItems="center" height='600px'>
+            <Box flex="1">
+              <Box flex="1" ml={8}>
+                {showForm2 ? (
+                  <form>
+                    <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
+                    <Input placeholder="Name" mb={4} />
+                    <Input placeholder="Email" mb={4} />
+                    <Textarea placeholder="Message" mb={4} resize="none" />
+                    <Flex justify="flex-end">
+                      <Button color='white' bg='gray.600' borderRadius={0} mr={2}>Submit</Button>
+                      <Button colorScheme="gray" borderRadius={0} onClick={toggleForm2}>Cancel</Button>
+                    </Flex>
+                  </form>
+                ) : (
+                  <>
+                    <Heading as="h3" size="lg" mb={2}>Location 2</Heading>
+                    <Text fontSize="lg" mb={2}>456 Elm Street</Text>
+                    <Text fontSize="lg" mb={4}>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
+                    <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm2} mb={2}>Connect With Us</Button>
+                  </>
+                )}
+              </Box>
+            </Box>
+            <Box flex="1" ml={8}>
+              <Image src={buzzedgoatpic10} alt="Image" height="100%" objectFit="contain" />
+            </Box>
+          </Flex>
         </Box>
       </Box>
       )}
-      
     </Box>
   );
 };
