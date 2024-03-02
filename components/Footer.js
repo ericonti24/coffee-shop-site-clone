@@ -20,7 +20,7 @@ const Footer = () => {
       bottom={0}
       alignContent='center'
       // border='1px solid red'
-      maxW={{ base: '100%', md: '1100px' }} // Set maximum width for larger screens
+      maxW={{ base: '100%', md: '100%' }} // Set maximum width for larger screens
     >
       <Stack
         spacing={{
@@ -50,7 +50,7 @@ const Footer = () => {
             </Stack>
           </>
         ) : (
-          <Flex justify="space-between" align="center" width='1100px'>
+          <Flex justify="space-between" align="center" width='100%'>
           <Text fontSize={fontSize} color="black">
             Coffee Shop Name
           </Text>

@@ -3,26 +3,46 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ScreenSizeDetector from './IsSmallerScreen';
+import { useState, useEffect } from 'react';
+
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isSmallerScreen = ScreenSizeDetector()
   const router = useRouter();
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const toggleMenu = () => {
     isOpen ? onClose() : onOpen();
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <Box
-      bg='white'
-      p={4} 
-      color="black"
+      bg={isScrolled ? 'black' : 'white'} 
+      p={2} 
+      color={isScrolled ? 'white' : 'black'}
       position='sticky'
       zIndex='999'
       borderBottom='1px solid black' // Add border bottom for small screens
       borderBottomWidth={{ base: '1px', md: '1px' }} // Adjust border width for small screens
-      maxW={{ base: '90%', md: '1100px' }} // Set max width for large screens
+      maxW={{ base: isScrolled ? '100%' : '90%', md: isScrolled ? '100%' : '1100px' }}
       mx="auto" // Center align the header
       top='0'
       transition="background-color 0.3s ease-in-out"
@@ -41,41 +61,42 @@ const Header = () => {
               variant="ghost"
               onClick={toggleMenu}
               aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
+              color={isScrolled ? 'white' : 'black'} // Adjust button color
             />
           </Flex>
         ) : (
           <Flex direction="column" alignItems="center" flex={1}>
-            <Heading as="h1" size="lg" mb={6}>
+            <Heading as="h1" size="lg" mb={4}>
               Coffee Shop Name
             </Heading>
             <Flex justifyContent="center" flex={1}>
               <Link href="/">
-                <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   HOME
                 </Button>
               </Link>
               <Link href="/menu">
-                <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   MENU
                 </Button>
               </Link>
               <Link href="/media">
-               <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  MEDIA
                </Button>
              </Link>
              <Link href="/events">
-               <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  EVENTS
                </Button>
              </Link>
              <Link href="/shop">
-               <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  SHOP
                </Button>
              </Link>
              <Link href="/beer-menu">
-               <Button variant="link" color="black" fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/beer-menu' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/beer-menu' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
                  BEER MENU
                </Button>
              </Link>
@@ -107,7 +128,7 @@ const Header = () => {
             onClick={onClose}
           />
           <Link href="/">
-            <Button variant="link" color="black" mb={10} fontSize="50" onClick={onClose} borderBottom={router.pathname === '/' ? '2px solid black' : 'none'}  borderBottomRadius={0}>
+            <Button variant="link" color="black" mb={10} fontSize="50" onClick={onClose} borderBottom={router.pathname === '/' ? '2px solid black' : 'none'}  borderBottomRadius={0} >
               HOME
             </Button>
           </Link>
