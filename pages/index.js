@@ -65,7 +65,7 @@ const HomePage = () => {
             <Heading as="h2" mb={2} textAlign='center'>Come Grab a Drink</Heading>
             <Flex mb={2} alignItems="center" border='1px solid black'>
               <Box flex="1" textAlign="center">
-                <Image src={buzzedgoatpic11} alt="Image" height="100%" objectFit="contain" />
+                <Image src={buzzedgoatpic11} alt="Image" objectFit="contain" />
                 {showForm1 ? (
                   <form>
                     <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
@@ -89,7 +89,7 @@ const HomePage = () => {
             </Flex>
             <Flex mb={2} alignItems="center" border='1px solid black'>
               <Box flex="1" textAlign="center">
-                <Image src={buzzedgoatpic10} alt="Image" height="100%" objectFit="contain" />
+                <Image src={buzzedgoatpic10} alt="Image" objectFit="contain" />
                 {showForm2 ? (
                   <form>
                     <Heading as="h3" size="lg" mb={4}>Connect With Us</Heading>
