@@ -1,9 +1,11 @@
-import { Box, Flex, Heading, Button, IconButton, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Heading, Button, IconButton, useDisclosure, Image } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ScreenSizeDetector from './IsSmallerScreen';
 import { useState, useEffect } from 'react';
+import buzzedgoatpic21 from '../public/images/buzzedgoatpic21.jpeg'
+
 
 
 const Header = () => {
@@ -11,7 +13,7 @@ const Header = () => {
   const isSmallerScreen = ScreenSizeDetector()
   const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const buzzedgoatpic21 = "/_next/static/media/buzzedgoatpic21.b2e09aed.jpeg"
 
   const toggleMenu = () => {
     isOpen ? onClose() : onOpen();
@@ -40,7 +42,7 @@ const Header = () => {
       color={isScrolled ? 'white' : 'black'}
       position='sticky'
       zIndex='999'
-      maxW={{ base: isScrolled ? '100%' : '90%', md: isScrolled ? '100%' : '100%' }}
+      maxW={{ base: isScrolled ? '100%' : '100%', md: isScrolled ? '100%' : '100%' }}
       mx="auto" // Center align the header
       top='0'
       transition="background-color 0.3s ease-in-out"
@@ -51,8 +53,9 @@ const Header = () => {
       >
         {isSmallerScreen ? (
           <Flex alignItems="center">
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={4} borderRadius='full'/>
             <Link href="/">
-              <Heading as="h1" size="lg" mr={20} fontFamily='Helvetica, arial, sans-serif'>
+              <Heading as="h1" size="md" mr={20} fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
               </Heading>
             </Link>
@@ -66,6 +69,7 @@ const Header = () => {
           </Flex>
         ) : (
           <Flex direction="column" alignItems="center" flex={1} fontFamily='Helvetica, arial, sans-serif'>
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="90px" mr={4} borderRadius='full'/>
             <Heading as="h1" size="lg" mb={4} >
               Coffee Shop Name
             </Heading>
@@ -95,11 +99,11 @@ const Header = () => {
                  SHOP
                </Button>
              </Link>
-             <Link href="/beer-menu">
+             {/* <Link href="/beer-menu">
                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/beer-menu' ? '1px solid black' : 'none'}  borderBottomRadius={0}>
                  BEER MENU
                </Button>
-             </Link>
+             </Link> */}
             </Flex>
           </Flex>
         )}
@@ -152,11 +156,11 @@ const Header = () => {
                SHOP
              </Button>
            </Link>
-           <Link href="/beer-menu">
+           {/* <Link href="/beer-menu">
              <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/beer-menu' ? '2px solid black' : 'none'}  borderBottomRadius={0}>
                BEER MENU
              </Button>
-           </Link>
+           </Link> */}
         </Box>
       )}
     </Box>

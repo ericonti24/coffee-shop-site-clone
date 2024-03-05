@@ -1,11 +1,10 @@
 // pages/shop.js
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 
 export default function Shop() {
   return (
-    <Box>
-      <h1>Shop Page</h1>
-      {/* Add content for the Shop page */}
+    <Box textAlign='center'mb='20' mt='20'>
+        <Heading>COMING SOON...</Heading>
     </Box>
   );
 }

@@ -9,17 +9,17 @@ const MenuPage = () => {
     const isSmallerScreen = ScreenSizeDetector()
 
   return (
-    <Box p={4} textAlign='center'>
-      <Heading as="h1" mb={10}>Our Menu</Heading>
+    <Box p={4} textAlign='center' mb={isSmallerScreen ? '10' : '100'} >
+      <Heading as="h1" mb={10}>MENU - PRICE LIST</Heading>
       <Box 
-        width={isSmallerScreen ? '100%' : '1100px'}
+        width={isSmallerScreen ? '90%' : '1100px'}
         // height={isSmallerScreen ? '100%' : '510px'}
         mx="auto"
       >
         <ChakraImage src={menu1} alt="Menu1" />
       </Box>
       <Box 
-        width={isSmallerScreen ? '100%' : '1100px'}
+        width={isSmallerScreen ? '90%' : '1100px'}
         // height={isSmallerScreen ? '50%' : '500px'}
         mx="auto" 
         mt={isSmallerScreen ? '10' : '100'}

@@ -1,11 +1,15 @@
-import { ButtonGroup, Container, IconButton, Stack, Text, Flex } from '@chakra-ui/react';
+import { ButtonGroup, Container, IconButton, Stack, Text, Flex, Image } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faYelp } from '@fortawesome/free-brands-svg-icons';
 import ScreenSizeDetector from '@/components/IsSmallerScreen';
+import buzzedgoatpic21 from '../public/images/buzzedgoatpic21.jpeg'
+
 
 const Footer = () => {
   const isSmallerScreen = ScreenSizeDetector();
   const fontSize = isSmallerScreen ? 'sm' : 'lg'; // Adjust fontSize based on screen size
+  const buzzedgoatpic21 = "/_next/static/media/buzzedgoatpic21.b2e09aed.jpeg"
+
 
   return (
     <Container
@@ -41,6 +45,7 @@ const Footer = () => {
               </ButtonGroup>
             </Stack>
             <Stack direction="row" justify="space-between" align="center">
+              <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={0} borderRadius='full'/>
               <Text fontSize={fontSize} color="white" textAlign="left" fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
               </Text>
@@ -51,9 +56,12 @@ const Footer = () => {
           </>
         ) : (
           <Flex justify="space-between" align="center" width='100%'>
-          <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
-            Coffee Shop Name
-          </Text>
+            <Flex align='center'>
+              <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={2} borderRadius='full'/>
+              <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
+                Coffee Shop Name
+              </Text>
+            </Flex>
           <Stack direction="row" align="center" color='white'>
             <ButtonGroup variant="tertiary">
               <IconButton as="a" href="#" aria-label="Facebook" icon={<FontAwesomeIcon icon={faFacebook} />} />
