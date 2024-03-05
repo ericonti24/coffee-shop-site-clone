@@ -15,7 +15,7 @@ const Footer = () => {
         base: '5',
         md: '10',
       }}
-      bg="transparent" 
+      bg="black" 
       mt="auto" 
       bottom={0}
       alignContent='center'
@@ -32,7 +32,7 @@ const Footer = () => {
       >
         {isSmallerScreen ? (
           <>
-            <Stack direction="row" justify="center" align="center">
+            <Stack direction="row" justify="center" align="center" color='white'>
               <ButtonGroup variant="tertiary">
                 <IconButton as="a" href="#" aria-label="Facebook" icon={<FontAwesomeIcon icon={faFacebook} />} />
                 <IconButton as="a" href="#" aria-label="Instagram" icon={<FontAwesomeIcon icon={faInstagram} />} />
@@ -41,20 +41,20 @@ const Footer = () => {
               </ButtonGroup>
             </Stack>
             <Stack direction="row" justify="space-between" align="center">
-              <Text fontSize={fontSize} color="black" textAlign="left">
+              <Text fontSize={fontSize} color="white" textAlign="left" fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
               </Text>
-              <Text fontSize={fontSize} color="black" textAlign="right">
+              <Text fontSize={fontSize} color="white" textAlign="right" fontFamily='Helvetica, arial, sans-serif'>
                 &copy; {new Date().getFullYear()} Coffee Shop Name. All rights reserved.
               </Text>
             </Stack>
           </>
         ) : (
           <Flex justify="space-between" align="center" width='100%'>
-          <Text fontSize={fontSize} color="black">
+          <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
             Coffee Shop Name
           </Text>
-          <Stack direction="row" align="center">
+          <Stack direction="row" align="center" color='white'>
             <ButtonGroup variant="tertiary">
               <IconButton as="a" href="#" aria-label="Facebook" icon={<FontAwesomeIcon icon={faFacebook} />} />
               <IconButton as="a" href="#" aria-label="Instagram" icon={<FontAwesomeIcon icon={faInstagram} />} />
@@ -62,7 +62,7 @@ const Footer = () => {
               <IconButton as="a" href="#" aria-label="Yelp" icon={<FontAwesomeIcon icon={faYelp} />} />
             </ButtonGroup>
           </Stack>
-          <Text fontSize={fontSize} color="black">
+          <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
             &copy; {new Date().getFullYear()} Coffee Shop Name. All rights reserved.
           </Text>
         </Flex>
