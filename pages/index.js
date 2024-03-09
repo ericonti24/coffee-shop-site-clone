@@ -97,9 +97,9 @@ const HomePage = () => {
           ))}
         </Box>
       </Box>
-      <Box p={4} margin="0 auto" textAlign="center"  maxWidth={isSmallerScreen ? '100%' : '1200px'} mb='8'>
+      <Box p={4} margin="0 auto" textAlign="center"  maxWidth={isSmallerScreen ? '100%' : '1200px'} mb='0'>
         <Box margin="0 auto" bg='white' mb={4}>
-          <Heading as="h2" mb={4} fontFamily='Didact Gothic' color='black' fontSize='25'>ABOUT US</Heading>
+          <Heading as="h2" mb={4} fontFamily='Helvetica, arial, sans-serif' color='black' fontSize='25'>ABOUT US</Heading>
           <Text fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum urna nec turpis hendrerit,
             vitae ullamcorper nisi tristique. Nulla facilisi. Sed elementum eros a orci tincidunt, ut rutrum
@@ -108,13 +108,13 @@ const HomePage = () => {
         </Box>
         <Box mb={8} />
 
-          <Heading as="h2" mb={8} fontFamily='Didact Gothic' fontSize='25'>OUR LOCATIONS</Heading>
+          <Heading as="h2" mb={8} fontFamily='Helvetica, arial, sans-serif' fontSize='25'>OUR LOCATIONS</Heading>
 
           <Flex alignItems={isSmallerScreen ? "center" : "flex-start"} flexDirection={isSmallerScreen ? "column" : "row"} justify={isSmallerScreen ? "center" : "space-around"}>
             <Box flex="1" textAlign="center" mb={isSmallerScreen ? 4 : 0}>
                 {/* Content for Location 1 */}
                 <Image src={buzzedgoatpic20} alt="Location 1" w={isSmallerScreen ? "100%" : "500px"} style={{ margin: 'auto' }} />
-                {showForm1 ? (
+                {/* {showForm1 ? (
                 <form>
                   <Heading as="h3" size="lg" mb={4} fontFamily='Helvetica, arial, sans-serif'>Connect With Us</Heading>
                   <Input placeholder="Name" mb={4} />
@@ -132,12 +132,18 @@ const HomePage = () => {
                   <Text fontSize="lg" mb={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
                   <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm1} mb={2} fontFamily='Helvetica, arial, sans-serif'>Connect With Us</Button>
                 </>
-              )}
+              )} */}
+                {/* <Heading as="h3" size="md" mb={2} fontFamily='Helvetica, arial, sans-serif'>Location 1</Heading> */}
+                <Text fontSize="md" mb={2} mt={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum urna nec turpis hendrerit,vitae ullamcorper nisi tristique.
+                </Text>
+                <Text fontSize="sm" fontWeight='bold' mb={2} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>123 Main Street</Text>
+                <Text fontSize="sm" fontWeight='bold' mb={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>Opening Hours: Monday - Friday, 8:00 AM - 10:00 PM</Text>
             </Box>
             <Box flex="1" textAlign="center">
               {/* Content for Location 2 */}
-              <Image src={buzzedgoatpic18} alt="Location 2" w={isSmallerScreen ? "100%" : "700px"} style={{ margin: 'auto' }} />
-              {showForm2 ? (
+              <Image src={buzzedgoatpic18} alt="Location 2" w={isSmallerScreen ? "100%" : "700px"} style={{ margin: 'auto' }}/>
+              {/* {showForm2 ? (
                 <form>
                   <Heading as="h3" size="lg" mb={4} fontFamily='Helvetica, arial, sans-serif'>Connect With Us</Heading>
                   <Input placeholder="Name" mb={4} fontFamily='Helvetica, arial, sans-serif'/>
@@ -155,12 +161,18 @@ const HomePage = () => {
                 <Text fontSize="lg" mb={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
                 <Button color='white' bg='gray.600' borderRadius={0} onClick={toggleForm2} fontFamily='Helvetica, arial, sans-serif'>Connect With Us</Button>
               </>
-            )}
+            )} */}
+              {/* <Heading as="h3" size="lg" mb={2} fontFamily='Helvetica, arial, sans-serif'>Location 2</Heading> */}
+              <Text fontSize="md" mb={2} mt={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum urna nec turpis hendrerit,vitae ullamcorper nisi tristique.
+              </Text>
+              <Text fontSize="sm" fontWeight='bold' mb={2} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>456 Elm Street</Text>
+              <Text fontSize="sm" fontWeight='bold' mb={4} fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>Opening Hours: Monday - Friday, 9:00 AM - 11:00 PM</Text>
           </Box>
         </Flex>
       </Box>
       <Box p={4} margin="0 auto" mb='8' textAlign="center">
-        <Heading as="h2" mb={8} fontFamily='Didact Gothic' fontSize='25'>COME EXPERIENCE</Heading>
+        <Heading as="h2" mb={8} fontFamily='Helvetica, arial, sans-serif' fontSize='25'>COME EXPERIENCE</Heading>
         <Flex 
           maxWidth={isSmallerScreen ? '100%' : '100%'}
           margin={isSmallerScreen ? '0' : '0 auto'}

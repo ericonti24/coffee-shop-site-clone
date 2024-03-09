@@ -1,23 +1,29 @@
 import { Box, Flex, Input, Button, Heading, Text } from '@chakra-ui/react';
 import ScreenSizeDetector from '@/components/IsSmallerScreen';
 import buzzedgoatpic5 from '../public/images/buzzedgoatpic5.jpeg'
+import buzzedgoatpic29 from '../public/images/buzzedgoatpic29.jpeg'
+import buzzedgoatpic1 from '../public/images/buzzedgoatpic1.webp'
 import { useState } from 'react';
 
 export default function Events() {
   const isSmallerScreen = ScreenSizeDetector();
   const [isClicked, setIsClicked] = useState(false);
 
+  // console.log(buzzedgoatpic29);
+
   const handleInputFocus = () => {
     setIsClicked(true);
   };
 
   const buzzedgoatpic5 = "/_next/static/media/buzzedgoatpic5.64b8021d.jpeg";
+  const buzzedgoatpic29 = "/_next/static/media/buzzedgoatpic29.f00888da.jpeg"
+  const buzzedgoatpic1 = "/_next/static/media/buzzedgoatpic1.65bb9b94.webp"
 
   return (
     <Box p={5}>
       {isSmallerScreen ? (
         <Box
-          backgroundImage={`url(${buzzedgoatpic5})`}
+          backgroundImage={`url(${buzzedgoatpic29})`}
           backgroundSize="cover"
           backgroundPosition="center"
           minHeight="400px"
@@ -27,7 +33,7 @@ export default function Events() {
           <Flex
             flexDirection="column"
             alignItems="flex-start"
-            transform="translate(6%, 90%)"
+            transform="translate(5%, 90%)"
             color="white"
           >
             <Heading as="h2" mb={2}>Sign Up for Events</Heading>
@@ -54,10 +60,13 @@ export default function Events() {
       ) : (
         <Box p={4} maxWidth='1100px' margin="0 auto">
           <Box
-            backgroundImage={`url(${buzzedgoatpic5})`}
+            backgroundImage={`url(${buzzedgoatpic29})`}
             backgroundSize="100% 100%"
+            // boxSize='1000px'
             backgroundPosition="center"
-            minHeight="1000px" 
+            // minHeight="1000px" 
+            height='800px'
+            // width='1000px'
             position="relative" 
           >
             <Flex

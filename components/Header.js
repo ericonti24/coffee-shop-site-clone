@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <Box
       bg={isScrolled ? 'black' : 'white'} 
-      p={2} 
+      p={0} 
       color={isScrolled ? 'white' : 'black'}
       position='sticky'
       zIndex='999'
@@ -46,14 +46,16 @@ const Header = () => {
       mx="auto" // Center align the header
       top='0'
       transition="background-color 0.3s ease-in-out"
+      height={isSmallerScreen ? '40px' : '115px'}
+      // border='1px solid red'
       >
       <Flex 
         justifyContent="space-between" 
         alignItems="center"
       >
         {isSmallerScreen ? (
-          <Flex alignItems="center">
-            <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={4} borderRadius='full'/>
+          <Flex alignItems="center" >
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="40px" mr={4} borderRadius='full'/>
             <Link href="/">
               <Heading as="h1" size="md" mr={20} fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
@@ -68,34 +70,34 @@ const Header = () => {
             />
           </Flex>
         ) : (
-          <Flex direction="column" alignItems="center" flex={1} fontFamily='Helvetica, arial, sans-serif'>
-            <Image src={buzzedgoatpic21} alt="Logo" boxSize="90px" mr={4} borderRadius='full'/>
-            <Heading as="h1" size="lg" mb={4} >
+          <Flex direction="column" alignItems="center" flex={1} fontFamily='Helvetica, arial, sans-serif' height='100px'>
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="70px" mr={4} borderRadius='full'/>
+            <Heading as="h2" size="sm" mb={0} >
               Coffee Shop Name
             </Heading>
             <Flex justifyContent="center" flex={1}>
               <Link href="/">
-                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   HOME
                 </Button>
               </Link>
               <Link href="/menu">
-                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   MENU
                 </Button>
               </Link>
               <Link href="/media">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  MEDIA
                </Button>
              </Link>
              <Link href="/events">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  EVENTS
                </Button>
              </Link>
              <Link href="/shop">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="lg" mr={8} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  SHOP
                </Button>
              </Link>

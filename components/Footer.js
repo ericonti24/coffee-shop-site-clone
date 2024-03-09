@@ -7,7 +7,7 @@ import buzzedgoatpic21 from '../public/images/buzzedgoatpic21.jpeg'
 
 const Footer = () => {
   const isSmallerScreen = ScreenSizeDetector();
-  const fontSize = isSmallerScreen ? 'sm' : 'lg'; // Adjust fontSize based on screen size
+  const fontSize = isSmallerScreen ? 'sm' : 'sm'; // Adjust fontSize based on screen size
   const buzzedgoatpic21 = "/_next/static/media/buzzedgoatpic21.b2e09aed.jpeg"
 
 
@@ -17,7 +17,7 @@ const Footer = () => {
       role="contentinfo"
       py={{
         base: '5',
-        md: '10',
+        md: '1',
       }}
       bg="black" 
       mt="auto" 
@@ -57,7 +57,7 @@ const Footer = () => {
         ) : (
           <Flex justify="space-between" align="center" width='100%'>
             <Flex align='center'>
-              <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={2} borderRadius='full'/>
+              <Image src={buzzedgoatpic21} alt="Logo" boxSize="40px" mr={2} borderRadius='full'/>
               <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
               </Text>
