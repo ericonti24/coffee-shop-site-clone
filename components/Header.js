@@ -46,7 +46,7 @@ const Header = () => {
       mx="auto" // Center align the header
       top='0'
       transition="background-color 0.3s ease-in-out"
-      height={isSmallerScreen ? '40px' : '115px'}
+      height={isSmallerScreen ? '50px' : '115px'}
       // border='1px solid red'
       >
       <Flex 
@@ -55,7 +55,7 @@ const Header = () => {
       >
         {isSmallerScreen ? (
           <Flex alignItems="center" >
-            <Image src={buzzedgoatpic21} alt="Logo" boxSize="40px" mr={4} borderRadius='full'/>
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={4} borderRadius='full'/>
             <Link href="/">
               <Heading as="h1" size="md" mr={20} fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
@@ -77,27 +77,27 @@ const Header = () => {
             </Heading>
             <Flex justifyContent="center" flex={1}>
               <Link href="/">
-                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="md" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   HOME
                 </Button>
               </Link>
               <Link href="/menu">
-                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+                <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="md" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                   MENU
                 </Button>
               </Link>
               <Link href="/media">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="md" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  MEDIA
                </Button>
              </Link>
              <Link href="/events">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="md" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  EVENTS
                </Button>
              </Link>
              <Link href="/shop">
-               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="xs" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
+               <Button variant="link" color={isScrolled ? 'white' : 'black'} fontSize="md" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? (isScrolled ? '1px solid white' : '1px solid black') : 'none'}  borderBottomRadius={0}>
                  SHOP
                </Button>
              </Link>

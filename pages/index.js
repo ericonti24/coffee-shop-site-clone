@@ -78,7 +78,7 @@ const HomePage = () => {
 
   return (
     <Box p={0}>
-      <Box width="100%" maxH="100%" overflow="hidden">
+      {/* <Box width="2000px" maxH="100%" overflow="hidden" >
         <Box
           display="flex"
           width={`${topImages.length * 100}%`}
@@ -96,8 +96,41 @@ const HomePage = () => {
             />
           ))}
         </Box>
+      </Box> */}
+      <Box
+      display="flex"
+      justifyContent="center" // Center horizontally
+      alignItems="center" // Center vertically
+      // minHeight="500px" // Set the minimum height
+    >
+      <Box
+        width="90vw" // Adjust width as needed
+        // height="80vh" // Adjust height as needed
+        overflow="hidden"
+      >
+        <Box
+          display="flex"
+          width={`${topImages.length * 100}%`}
+          transform={`translateX(-${currentIndex * (100 / topImages.length)}%)`}
+          transition="transform 0.9s ease"
+        >
+          {topImages.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              alt={`Image ${index + 1}`}
+              width={`${100 / topImages.length}%`}
+              objectFit="cover"
+              style={{
+                opacity: index === currentIndex ? 1 : 0,
+                transition: "opacity 0.9s ease",
+              }}
+            />
+          ))}
+        </Box>
       </Box>
-      <Box p={4} margin="0 auto" textAlign="center"  maxWidth={isSmallerScreen ? '100%' : '1200px'} mb='0'>
+    </Box>
+      <Box p={4} margin="0 auto" textAlign="center"  maxWidth={isSmallerScreen ? '100%' : '1700px'} mb='0'>
         <Box margin="0 auto" bg='white' mb={4}>
           <Heading as="h2" mb={4} fontFamily='Helvetica, arial, sans-serif' color='black' fontSize='25'>ABOUT US</Heading>
           <Text fontFamily='Helvetica, arial, sans-serif' color='rgb(94, 94, 94)'>
@@ -174,7 +207,7 @@ const HomePage = () => {
       <Box p={4} margin="0 auto" mb='8' textAlign="center">
         <Heading as="h2" mb={8} fontFamily='Helvetica, arial, sans-serif' fontSize='25'>COME EXPERIENCE</Heading>
         <Flex 
-          maxWidth={isSmallerScreen ? '100%' : '100%'}
+          maxWidth={isSmallerScreen ? '100%' : '1700px'}
           margin={isSmallerScreen ? '0' : '0 auto'}
           alignItems="center" 
           flexDirection={isSmallerScreen ? "column" : "row"} 

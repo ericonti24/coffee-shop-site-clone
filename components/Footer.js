@@ -57,7 +57,7 @@ const Footer = () => {
         ) : (
           <Flex justify="space-between" align="center" width='100%'>
             <Flex align='center'>
-              <Image src={buzzedgoatpic21} alt="Logo" boxSize="40px" mr={2} borderRadius='full'/>
+              <Image src={buzzedgoatpic21} alt="Logo" boxSize="70px" mr={2} borderRadius='full'/>
               <Text fontSize={fontSize} color="white" fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
               </Text>
