@@ -27,6 +27,7 @@ export default function Events() {
           backgroundSize="cover"
           backgroundPosition="center"
           minHeight="400px"
+          width='90vw'
           px={9}
           py={-20}
         >
@@ -65,7 +66,8 @@ export default function Events() {
             // boxSize='1000px'
             backgroundPosition="center"
             // minHeight="1000px" 
-            height='800px'
+            height='900px'
+            // height='35vw'
             // width='1000px'
             position="relative" 
           >

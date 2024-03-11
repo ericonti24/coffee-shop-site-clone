@@ -78,34 +78,13 @@ const HomePage = () => {
 
   return (
     <Box p={0}>
-      {/* <Box width="2000px" maxH="100%" overflow="hidden" >
-        <Box
-          display="flex"
-          width={`${topImages.length * 100}%`}
-          transform={`translateX(-${currentIndex * (100 / topImages.length)}%)`}
-          transition="transform 0.9s ease"
-        >
-          {topImages.map((image, index) => (
-            <Image
-              key={index}
-              src={image}
-              alt={`Image ${index + 1}`}
-              width={`${100 / topImages.length}%`}
-              objectFit="cover"
-              style={{ opacity: index === currentIndex ? 1 : 0, transition: 'opacity 0.9s ease' }}
-            />
-          ))}
-        </Box>
-      </Box> */}
       <Box
       display="flex"
-      justifyContent="center" // Center horizontally
-      alignItems="center" // Center vertically
-      // minHeight="500px" // Set the minimum height
-    >
+      justifyContent="center"
+      alignItems="center" 
+      >
       <Box
-        width="90vw" // Adjust width as needed
-        // height="80vh" // Adjust height as needed
+        width="90vw"
         overflow="hidden"
       >
         <Box
