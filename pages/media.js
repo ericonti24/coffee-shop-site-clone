@@ -6,10 +6,10 @@ const MediaPage = () => {
   const isSmallerScreen = ScreenSizeDetector()
 
   return (
-    <Box p={4} textAlign='center'>
+    <Box p={4} textAlign='center' >
       <Heading as="h1" mb={4}>Media</Heading>
       <Flex justifyContent="center">
-        <Box width={isSmallerScreen ? '100%' : '1100px'}>
+        <Box width={isSmallerScreen ? '100%' : '1100px'} >
           <iframe
             width="100%"
             height={isSmallerScreen ? '200px' : '520px'}
@@ -17,6 +17,7 @@ const MediaPage = () => {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            
           ></iframe>
         </Box>
       </Flex>

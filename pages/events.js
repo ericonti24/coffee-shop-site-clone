@@ -20,7 +20,7 @@ export default function Events() {
   const buzzedgoatpic1 = "/_next/static/media/buzzedgoatpic1.65bb9b94.webp"
 
   return (
-    <Box p={5}>
+    <Box p={5} >
       {isSmallerScreen ? (
         <Box
           backgroundImage={`url(${buzzedgoatpic29})`}

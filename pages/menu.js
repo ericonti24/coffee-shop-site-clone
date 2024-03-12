@@ -9,7 +9,7 @@ const MenuPage = () => {
     const isSmallerScreen = ScreenSizeDetector()
 
   return (
-    <Box p={4} textAlign='center' mb={isSmallerScreen ? '10' : '100'} >
+    <Box p={4} textAlign='center'>
       <Heading as="h1" mb={10}>MENU - PRICE LIST</Heading>
       <Box 
         width={isSmallerScreen ? '100%' : '50vw'}

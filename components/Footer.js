@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ButtonGroup, Container, IconButton, Stack, Text, Flex, Image } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faYelp } from '@fortawesome/free-brands-svg-icons';
@@ -7,9 +8,9 @@ import buzzedgoatpic21 from '../public/images/buzzedgoatpic21.jpeg'
 
 const Footer = () => {
   const isSmallerScreen = ScreenSizeDetector();
-  const fontSize = isSmallerScreen ? 'sm' : 'sm'; // Adjust fontSize based on screen size
   const buzzedgoatpic21 = "/_next/static/media/buzzedgoatpic21.b2e09aed.jpeg"
-
+  const [showFooter, setShowFooter] = useState(false);
+  const fontSize = "sm"; 
 
   return (
     <Container
@@ -21,10 +22,9 @@ const Footer = () => {
       }}
       bg="black" 
       mt="auto" 
-      bottom={0}
       alignContent='center'
       // border='1px solid red'
-      maxW={{ base: '100%', md: '100%' }} // Set maximum width for larger screens
+      maxW={{ base: '100%', md: '100%' }} 
     >
       <Stack
         spacing={{
@@ -81,6 +81,9 @@ const Footer = () => {
 }
 
 export default Footer;
+
+
+
 
 
 

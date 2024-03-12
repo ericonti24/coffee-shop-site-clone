@@ -37,6 +37,9 @@ const Header = () => {
 
   return (
     <Box
+      className='footer'
+      width='100%'
+      mb={0}
       bg={isScrolled ? 'black' : 'white'} 
       p={0} 
       color={isScrolled ? 'white' : 'black'}
@@ -46,16 +49,18 @@ const Header = () => {
       mx="auto" // Center align the header
       top='0'
       transition="background-color 0.3s ease-in-out"
-      height={isSmallerScreen ? '50px' : '115px'}
+      height={isSmallerScreen ? '50px' : '120px'}
       // border='1px solid red'
       >
       <Flex 
         justifyContent="space-between" 
         alignItems="center"
+        // border='1px solid green'
+        height={isSmallerScreen ? '50px' :'120px'}
       >
         {isSmallerScreen ? (
           <Flex alignItems="center" >
-            <Image src={buzzedgoatpic21} alt="Logo" boxSize="50px" mr={4} borderRadius='full'/>
+            <Image src={buzzedgoatpic21} alt="Logo" boxSize="40px" mr={4} borderRadius='full'/>
             <Link href="/">
               <Heading as="h1" size="md" mr={20} fontFamily='Helvetica, arial, sans-serif'>
                 Coffee Shop Name
@@ -70,7 +75,7 @@ const Header = () => {
             />
           </Flex>
         ) : (
-          <Flex direction="column" alignItems="center" flex={1} fontFamily='Helvetica, arial, sans-serif' height='100px'>
+          <Flex direction="column" alignItems="center" flex={1} fontFamily='Helvetica, arial, sans-serif' height='110px'>
             <Image src={buzzedgoatpic21} alt="Logo" boxSize="70px" mr={4} borderRadius='full'/>
             <Heading as="h2" size="sm" mb={0} >
               Coffee Shop Name
