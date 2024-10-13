@@ -54,7 +54,7 @@ const Header = () => {
         py={2}
       >
         <AiOutlineAlert style={{ marginRight: '10px' }} />
-        <Text fontSize={{base: "md", md: "lg"}} fontWeight="bold">
+        <Text fontSize={{base: "sm", md: "lg"}} fontWeight="bold">
           ALL FIRST RESPONDERS GET 15% OFF
         </Text>
         <AiOutlineAlert style={{ marginLeft: '10px' }} />
