@@ -24,7 +24,7 @@ export default function About() {
         flexDirection={isSmallerScreen ? "column-reverse" : "row"} 
         justifyContent="space-between" 
         alignItems="center"
-        px={{ base: 4, md: 12 }} // Added padding for the About Us section
+        px={{ base: 4, md: 12 }} 
         // border='1px solid green'
         width='100%'
       >
@@ -51,7 +51,7 @@ export default function About() {
         >
           <Heading
             fontFamily='Helvetica, arial, sans-serif'
-            size='4xl'
+            size={{base: '3xl', md: '4xl'}}
             width="100%"
             color='black'
             py={{base: 0, md: 12}}

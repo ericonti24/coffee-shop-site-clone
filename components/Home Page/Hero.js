@@ -34,7 +34,7 @@ export default function Hero({hero}) {
       <Box 
         position="relative"  // Allows positioning of the text over the image
         width="100%"
-        height="40vh"
+        height="45vh"
         _before={{
           content: '""',
           position: 'absolute',

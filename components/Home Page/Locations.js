@@ -26,13 +26,13 @@ export default function Locations() {
     >
       <Heading
         display="flex" 
-        justifyContent="flex-start"
+        justifyContent={isSmallerScreen ? "center" : "flex-start"}
         width='100%'
         fontFamily='Helvetica, arial, sans-serif'
-        size='4xl'
+        size={{base: '3xl', md: '4xl'}}
         color='black'
         px={{ base: 4, md: 40 }} 
-        textAlign="left" 
+        textAlign={isSmallerScreen ? "center" : "left"}
         mb={4}
       >
         LOCATIONS
@@ -57,7 +57,7 @@ export default function Locations() {
         <Box 
           flex="2" 
           p={4} 
-          textAlign={isSmallerScreen ? "center" : "left"}
+          textAlign={isSmallerScreen ? "center" : "center"}
         >
           <Heading>
             AHWATUKEE
@@ -135,7 +135,7 @@ export default function Locations() {
         <Box 
             flex="2" 
             p={4} 
-            textAlign={isSmallerScreen ? "center" : "left"}
+            textAlign={isSmallerScreen ? "center" : "center"}
         >
           <Heading>
             TEMPE
