@@ -33,10 +33,10 @@ export default function Experience() {
             justifyContent="flex-start"
             width='100%'
             fontFamily='Helvetica, arial, sans-serif'
-            size='4xl'
+            size={{base: '3xl', md: '4xl'}}
             color='black'
             px={{ base: 4, md: 40 }} 
-            textAlign="left" 
+            textAlign={isSmallerScreen ? "center" : "left"}
             mb={4}
           >
             COME EXPERIENCE
@@ -52,7 +52,7 @@ export default function Experience() {
             alignItems="center"
             justifyContent="space-between"
             px={{ base: 4, md: 40 }}
-            py={0} 
+            py={6} 
             mb={0} 
           >
             <Box 

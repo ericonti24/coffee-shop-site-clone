@@ -43,9 +43,9 @@ export default function Locations() {
         justifyContent="space-between"
         px={{ base: 4, md: 40 }}
         py={6} 
-        mb={0} 
+        mb={{base: 0, md: 8}} 
       >
-        <Box flex="1" p={4}>
+        <Box flex="1" p={0}>
           <Image 
             src={buzzedgoatpic20} 
             // width={isSmallerScreen ? '100%' : '80%'} 
@@ -56,7 +56,8 @@ export default function Locations() {
         </Box>
         <Box 
           flex="2" 
-          p={4} 
+          p={0}
+          m={0} 
           textAlign={isSmallerScreen ? "center" : "center"}
         >
           <Heading>
@@ -64,9 +65,10 @@ export default function Locations() {
           </Heading>
           <Text 
             mb={2} 
-            mt={4} 
+            mt={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
+            pl={10}
           >
             Thank you for the continuous support for voting us Ahwatukee's best coffee shop 5 years running!! 
             We are Tukee's local coffee shop!
@@ -79,7 +81,7 @@ export default function Locations() {
             4302 East Ray Road, Phoenix, Arizona 85044, United States
           </Text>
           <Text 
-            mb={4} 
+            mb={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
             fontWeight='bold'
@@ -87,7 +89,7 @@ export default function Locations() {
             Hours
           </Text>
           <List 
-            mb={4} 
+            mb={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
           >
@@ -123,7 +125,7 @@ export default function Locations() {
         py={6} 
         mb={0} 
       >
-        <Box flex="1" p={4}>
+        <Box flex="1" p={0}>
           <Image 
             src={tempeLocationPic} 
             // width={isSmallerScreen ? '100%' : '80%'} 
@@ -134,7 +136,8 @@ export default function Locations() {
         </Box>
         <Box 
             flex="2" 
-            p={4} 
+            p={0} 
+            mt={{base: 0, md: 0}}
             textAlign={isSmallerScreen ? "center" : "center"}
         >
           <Heading>
@@ -145,6 +148,7 @@ export default function Locations() {
             mt={4} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
+            pl={10}
           >
             Bringing Ahwatukee's favorite coffee shop to Tempe! 
             Located off the 60 on Southern and McClintock. Drive Thru open.
@@ -157,7 +161,7 @@ export default function Locations() {
             3415 South McClintock Drive, STE 114 Tempe, Arizona 85282, United States
           </Text>
           <Text 
-            mb={4} 
+            mb={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
             fontWeight='bold'
@@ -165,7 +169,7 @@ export default function Locations() {
             Hours
           </Text>
           <List 
-            mb={4} 
+            mb={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
           >
