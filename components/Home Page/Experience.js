@@ -33,7 +33,7 @@ export default function Experience() {
             justifyContent="flex-start"
             width='100%'
             fontFamily='Helvetica, arial, sans-serif'
-            size={{base: '3xl', md: '4xl'}}
+            size={{base: '2xl', md: '4xl'}}
             color='black'
             px={{ base: 4, md: 40 }} 
             textAlign={isSmallerScreen ? "center" : "left"}

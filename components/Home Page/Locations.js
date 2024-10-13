@@ -29,7 +29,7 @@ export default function Locations() {
         justifyContent={isSmallerScreen ? "center" : "flex-start"}
         width='100%'
         fontFamily='Helvetica, arial, sans-serif'
-        size={{base: '3xl', md: '4xl'}}
+        size={{base: '2xl', md: '4xl'}}
         color='black'
         px={{ base: 4, md: 40 }} 
         textAlign={isSmallerScreen ? "center" : "left"}
@@ -68,7 +68,7 @@ export default function Locations() {
             mt={2} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
-            pl={10}
+            pl={{base: 0, md: 10}}
           >
             Thank you for the continuous support for voting us Ahwatukee's best coffee shop 5 years running!! 
             We are Tukee's local coffee shop!
@@ -148,7 +148,7 @@ export default function Locations() {
             mt={4} 
             fontFamily='Helvetica, arial, sans-serif' 
             color='black'
-            pl={10}
+            pl={{base: 0, md: 10}}
           >
             Bringing Ahwatukee's favorite coffee shop to Tempe! 
             Located off the 60 on Southern and McClintock. Drive Thru open.

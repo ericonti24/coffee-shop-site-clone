@@ -13,7 +13,7 @@ export default function About() {
       px={{ base: 4, md: 12}}
       py={{ base: 0, md: '12' }}
       // border='1px solid red'
-      mt={8}
+      mt={0}
     >
     <Box 
       width='100%' 
@@ -31,13 +31,13 @@ export default function About() {
         <Box 
           display="flex" 
           justifyContent="center" 
-          p={isSmallerScreen ? 6 : 0}
+          // p={isSmallerScreen ? 0 : 0}
           mb={isSmallerScreen ? 6 : 0} 
           // border='1px solid green'
         >
           <Image 
             src={buzzedgoatpic1} 
-            width={isSmallerScreen ? '100%' : '70%'} 
+            boxSize={isSmallerScreen ? '100%' : '100%'} 
             objectFit="contain"
             borderRadius="md"
           />
@@ -51,7 +51,7 @@ export default function About() {
         >
           <Heading
             fontFamily='Helvetica, arial, sans-serif'
-            size={{base: '3xl', md: '4xl'}}
+            size={{base: '2xl', md: '4xl'}}
             width="100%"
             color='black'
             py={{base: 0, md: 12}}
