@@ -17,7 +17,7 @@ const HomePage = () => {
       <Hero />
       <About />
       <Locations />
-      {/* <Experience /> */}
+      <Experience />
     </Box>
   );
 };
