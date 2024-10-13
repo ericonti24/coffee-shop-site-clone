@@ -28,10 +28,9 @@ export default function Hero({hero}) {
 
 
   return (
-    // <Box width="100%">
-    <>
+    <Box width="100%">
     {isSmallerScreen ? (
-      <>
+      // <>
       <Box 
         position="relative"  // Allows positioning of the text over the image
         width="100%"
@@ -100,7 +99,7 @@ export default function Hero({hero}) {
           </Flex>
         </Box>
       </Box>
-      </>
+      // </>
     ) : (
       <Box 
         position="relative"  // Allows positioning of the text over the image
@@ -169,7 +168,7 @@ export default function Hero({hero}) {
         </Box>
       </Box>
     )}
-    </>
+    </Box>
   )
 }
 

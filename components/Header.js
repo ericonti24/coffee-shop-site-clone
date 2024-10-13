@@ -46,15 +46,26 @@ const Header = () => {
       right='0'
     >
       {/* Announcement Bar */}
-      <Flex justifyContent="center" alignItems="center" bg="white" color="black" py={2}>
+      <Flex 
+        justifyContent="center" 
+        alignItems="center" 
+        bg="white" 
+        color="black" 
+        py={2}
+      >
         <AiOutlineAlert style={{ marginRight: '10px' }} />
-        <Text fontSize="lg" fontWeight="bold">
+        <Text fontSize={{base: "md", md: "lg"}} fontWeight="bold">
           ALL FIRST RESPONDERS GET 15% OFF
         </Text>
         <AiOutlineAlert style={{ marginLeft: '10px' }} />
       </Flex>
       {/* Header */}
-      <Flex justifyContent="space-between" alignItems="center" width="100%" py={2}>
+      <Flex 
+        justifyContent="space-between" 
+        alignItems="center" 
+        width="100%" 
+        py={2}
+      >
         {/* Logo */}
         <Flex alignItems="center" justifyContent="center">
           <Link href="/">
