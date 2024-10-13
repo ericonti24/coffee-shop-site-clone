@@ -36,7 +36,15 @@ const Header = () => {
   }, []);
 
   return (
-    <Box width='100%' bg={isSmallerScreen ? 'black' : 'black'} p={0} zIndex='999' top='0' left='0' right='0'>
+    <Box 
+      width='100%' 
+      bg={isSmallerScreen ? 'black' : 'black'} 
+      p={0} 
+      zIndex='999' 
+      top='0' 
+      left='0' 
+      right='0'
+    >
       {/* Announcement Bar */}
       <Flex justifyContent="center" alignItems="center" bg="white" color="black" py={2}>
         <AiOutlineAlert style={{ marginRight: '10px' }} />
@@ -65,22 +73,53 @@ const Header = () => {
         {!isSmallerScreen && (
           <Flex justifyContent="center" alignItems="center" width="100%"> 
             <Link href="/menu">
-              <Button variant="link" color="white" fontSize="2xl" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/menu' ? '2px solid white' : 'none'} borderBottomRadius={0}>
+              <Button 
+                variant="link" 
+                color="white" 
+                fontSize="2xl" 
+                mr={10} 
+                _hover={{ textDecoration: 'none' }} 
+                borderBottom={router.pathname === '/menu' ? '2px solid white' : 'none'} 
+                borderBottomRadius={0}
+              >
                 MENU
               </Button>
             </Link>
             <Link href="/media">
-              <Button variant="link" color="white" fontSize="2xl" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/media' ? '2px solid white' : 'none'} borderBottomRadius={0}>
+              <Button 
+                variant="link" 
+                color="white" 
+                fontSize="2xl" 
+                mr={10} 
+                _hover={{ textDecoration: 'none' }} 
+                borderBottom={router.pathname === '/media' ? '2px solid white' : 'none'} 
+                borderBottomRadius={0}
+              >
                 MEDIA
               </Button>
             </Link>
             <Link href="/events">
-              <Button variant="link" color="white" fontSize="2xl" mr={10} _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/events' ? '2px solid white' : 'none'} borderBottomRadius={0}>
+              <Button 
+                variant="link" 
+                color="white" 
+                fontSize="2xl" 
+                mr={10} 
+                _hover={{ textDecoration: 'none' }} 
+                borderBottom={router.pathname === '/events' ? '2px solid white' : 'none'} 
+                borderBottomRadius={0}
+              >
                 EVENTS
               </Button>
             </Link>
             <Link href="/shop">
-              <Button variant="link" color="white" fontSize="2xl" _hover={{ textDecoration: 'none' }} borderBottom={router.pathname === '/shop' ? '2px solid white' : 'none'} borderBottomRadius={0}>
+              <Button 
+                variant="link" 
+                color="white" 
+                fontSize="2xl" 
+                _hover={{ textDecoration: 'none' }} 
+                borderBottom={router.pathname === '/shop' ? '2px solid white' : 'none'} 
+                borderBottomRadius={0}
+              >
                 SHOP
               </Button>
             </Link>
@@ -125,27 +164,72 @@ const Header = () => {
             onClick={onClose}
           />
           <Link href="/">
-            <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/' ? '2px solid black' : 'none'} borderBottomRadius={0}>
+            <Button 
+              variant="link" 
+              fontFamily='Helvetica, arial, sans-serif' 
+              color="rgb(27, 27, 27)" 
+              mb={10} 
+              fontSize="40" 
+              onClick={onClose} 
+              borderBottom={router.pathname === '/' ? '2px solid black' : 'none'} 
+              borderBottomRadius={0}
+            >
               HOME
             </Button>
           </Link>
           <Link href="/menu">
-            <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/menu' ? '2px solid black' : 'none'} borderBottomRadius={0}>
+            <Button 
+              variant="link" 
+              fontFamily='Helvetica, arial, sans-serif' 
+              color="rgb(27, 27, 27)" 
+              mb={10} 
+              fontSize="40" 
+              onClick={onClose} 
+              borderBottom={router.pathname === '/menu' ? '2px solid black' : 'none'} 
+              borderBottomRadius={0}
+            >
               MENU
             </Button>
           </Link>
           <Link href="/media">
-            <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/media' ? '2px solid black' : 'none'} borderBottomRadius={0}>
+            <Button 
+              variant="link" 
+              fontFamily='Helvetica, arial, sans-serif' 
+              color="rgb(27, 27, 27)" 
+              mb={10} 
+              fontSize="40" 
+              onClick={onClose} 
+              borderBottom={router.pathname === '/media' ? '2px solid black' : 'none'} 
+              borderBottomRadius={0}
+            >
               MEDIA
             </Button>
           </Link>
           <Link href="/events">
-            <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/events' ? '2px solid black' : 'none'} borderBottomRadius={0}>
+            <Button 
+              variant="link" 
+              fontFamily='Helvetica, arial, sans-serif' 
+              color="rgb(27, 27, 27)" 
+              mb={10} 
+              fontSize="40" 
+              onClick={onClose} 
+              borderBottom={router.pathname === '/events' ? '2px solid black' : 'none'} 
+              borderBottomRadius={0}
+            >
               EVENTS
             </Button>
           </Link>
           <Link href="/shop">
-            <Button variant="link" fontFamily='Helvetica, arial, sans-serif' color="rgb(27, 27, 27)" mb={10} fontSize="40" onClick={onClose} borderBottom={router.pathname === '/shop' ? '2px solid black' : 'none'} borderBottomRadius={0}>
+            <Button 
+              variant="link" 
+              fontFamily='Helvetica, arial, sans-serif' 
+              color="rgb(27, 27, 27)" 
+              mb={10} 
+              fontSize="40" 
+              onClick={onClose} 
+              borderBottom={router.pathname === '/shop' ? '2px solid black' : 'none'} 
+              borderBottomRadius={0}
+            >
               SHOP
             </Button>
           </Link>

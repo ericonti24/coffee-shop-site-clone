@@ -2,11 +2,15 @@ import { Box, Heading, Text, Image, Flex, List, ListItem} from '@chakra-ui/react
 import buzzedgoatpic20 from '../../public/images/buzzedgoatpic20.jpeg'
 import buzzedgoatpic18 from '../../public/images/buzzedgoatpic18.jpeg'
 import ScreenSizeDetector from '@/components/IsSmallerScreen';
+import TempeLocationPic from '../../public/images/BuzzedGoatTempeLocationPic.jpeg'
 
 export default function Locations() {
     const buzzedgoatpic18 = "/_next/static/media/buzzedgoatpic18.7e7b70b2.jpeg"
     const buzzedgoatpic20 = "/_next/static/media/buzzedgoatpic20.db00dacd.jpeg"
+    const tempeLocationPic = "/_next/static/media/BuzzedGoatTempeLocationPic.62e17936.jpeg"
     const isSmallerScreen = ScreenSizeDetector();
+    // console.log(TempeLocationPic);
+    
 
   return (
     <Box 
@@ -121,7 +125,7 @@ export default function Locations() {
       >
         <Box flex="1" p={4}>
           <Image 
-            src={buzzedgoatpic18} 
+            src={tempeLocationPic} 
             // width={isSmallerScreen ? '100%' : '80%'} 
             boxSize={isSmallerScreen ? "100%" : "100%"} 
             objectFit="contain"

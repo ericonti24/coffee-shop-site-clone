@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { Box} from '@chakra-ui/react';
 import ScreenSizeDetector from '@/components/IsSmallerScreen';
 import Hero from '@/components/Home Page/Hero';
 import About from '@/components/Home Page/About';
@@ -12,12 +13,12 @@ const HomePage = () => {
   const isSmallerScreen = ScreenSizeDetector();
 
   return (
-    <>
+    <Box width="100%">
       <Hero />
       <About />
       <Locations />
       <Experience />
-    </>
+    </Box>
   );
 };
 

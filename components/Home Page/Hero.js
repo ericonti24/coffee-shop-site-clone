@@ -28,7 +28,8 @@ export default function Hero({hero}) {
 
 
   return (
-    <Box width="100%">
+    // <Box width="100%">
+    <>
     {isSmallerScreen ? (
       <>
       <Box 
@@ -168,7 +169,7 @@ export default function Hero({hero}) {
         </Box>
       </Box>
     )}
-  </Box>
+    </>
   )
 }
 
