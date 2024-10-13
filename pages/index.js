@@ -15,9 +15,9 @@ const HomePage = () => {
   return (
     <Box width="100%">
       <Hero />
-      {/* <About />
-      <Locations />
-      <Experience /> */}
+      <About />
+      {/* <Locations /> */}
+      {/* <Experience /> */}
     </Box>
   );
 };

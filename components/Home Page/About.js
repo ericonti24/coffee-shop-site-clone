@@ -8,12 +8,12 @@ export default function About() {
 
   return (
     <Box 
-    textAlign="center" 
-    width="100%" 
-    px={{ base: 4, md: 12}}
-    py={{ base: 0, md: '12' }}
-    // border='1px solid red'
-    mt={8}
+      textAlign="center" 
+      width="100%" 
+      px={{ base: 4, md: 12}}
+      py={{ base: 0, md: '12' }}
+      // border='1px solid red'
+      mt={8}
     >
     <Box 
       width='100%' 

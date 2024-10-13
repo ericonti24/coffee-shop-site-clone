@@ -10,7 +10,7 @@ const MenuPage = () => {
 
   return (
     <Box p={10} textAlign='center'>
-      <Heading as="h1" mb={10}>MENU - PRICE LIST</Heading>
+      {/* <Heading as="h1" mb={10}>MENU - PRICE LIST</Heading> */}
       <Flex justifyContent="center">
         <Box 
           width={isSmallerScreen ? '100%' : '80%'}
